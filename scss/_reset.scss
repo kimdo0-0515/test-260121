@@ -1,0 +1,48 @@
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+
+@font-face {
+    font-family: 'YPairing';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/YPairingFont.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YPairing';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/YPairingFont-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'YPairing';
+}
+ul,li{
+  list-style: none;
+}
+a{
+  display: block;
+  text-decoration: none;
+  color: $black;
+}
+img{
+  display: block;
+  width: 100%;
+  border: none;
+}
+button{
+  cursor: pointer;
+}
+
+.inner{
+  width: 1400px;
+  margin: 0 auto;
+
+  // 반응형
+  @media all and (max-width: 1556px){
+    width: 90%;
+  }
+}

@@ -1,0 +1,208 @@
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+
+main{
+  section{
+    padding: $space-5xl 0;
+    @include border('bottom');
+
+    /* === section: main visual === */
+    &#visualSec{
+      .inner{
+        @include grid-container(1fr 1fr, $gap-l);
+
+        .visual__content{
+          display: grid;
+          grid-template-rows: repeat(3, min-content);
+          margin: auto 0;
+
+          h2{
+            font-size: $font-headline;
+          }
+
+          p{
+            color: $gray;
+            margin-top: $space-m;
+            margin-bottom: $space-2xl;
+          }
+
+          button{
+            @include btn-line;
+            width: fit-content;
+            height: fit-content;
+            padding: $space-s $space-l;
+            background-color: $black;
+            border-color: transparent;
+            font-size: $font-m;
+
+            a{ color: $white; }
+
+            @media (hover: hover) and (pointer: fine){
+              &:hover{
+                background-color: $white;
+                border-color: $border-color;
+
+                a{ color: $black; }
+              }
+            }
+          }
+        }
+
+        .visual__img{
+          @include grid-center;
+          aspect-ratio: 4 / 3;
+          background-color: $light-gray;
+          @include border;
+        }
+      }
+    }
+
+
+
+    /* === section: product === */
+    &#productSec{
+      .inner{
+        @at-root .section__top{
+          @include grid-container(1fr auto, $gap-l);
+          align-items: center;
+          margin-bottom: $space-3xl;
+
+          h3{
+            font-size: $font-2xl;
+            font-weight: 600;
+          }
+
+          button{
+            @include btn-line;
+            background-color: $white;
+            padding: $space-s $space-l;
+            font-size: $font-m;
+
+            @media (hover: hover) and (pointer: fine){
+              &:hover{
+                background-color: $border-color;
+              }
+            }
+          }
+        }
+
+        .product__content{
+          @include grid-container(repeat(4, 1fr), $gap-m);
+
+          .product{
+            @include grid-container(1fr 1fr, 0);
+            @include border;
+            @include transition;
+            cursor: pointer;
+
+            @media (hover: hover) and (pointer: fine){
+              &:hover{ border-color: $point-color; }
+            }
+
+            .product__img{
+              aspect-ratio: 1 / 1;
+              padding: $space-l;
+              background-color: $light-gray;
+              @include grid-center;
+              position: relative;
+
+              .product__badge{
+                padding: 4px;
+                background-color: $black;
+                font-size: $font-xs;
+                color: $white;
+                position: absolute;
+                top: $space-xs;
+                right: $space-xs;
+              }
+            }
+            .product__info{
+              height: 100%;
+              padding: $space-xs;
+              display: grid;
+              grid: repeat(3, min-content) / 100%;
+              align-items: center;
+              align-content: center;
+              margin: auto 0;
+
+              .product__category{
+                font-size: $font-base;
+                color: $light-gray;
+              }
+
+              .product__title{
+                margin-top: $space-xs;
+                margin-bottom: $space-m;
+              }
+
+              .product__price{
+                .original-price{
+                  font-size: $font-s;
+                  font-weight: 400;
+                  color: $light-gray;
+                  margin-left: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+    /* === section: category === */
+    &#categorySec{
+      background-color: $light-gray;
+
+      .inner{
+        .category__content{
+          @include grid-container(repeat(3, 1fr), $gap-m);
+
+          .category{
+            aspect-ratio: 4 / 3;
+            background-color: $white;
+            @include border;
+            @include grid-center;
+            grid: repeat(3, min-content) / 100%;
+            align-content: center;
+            text-align: center;
+
+            .category__title{
+              font-size: $font-2xl;
+              margin: $space-xl 0;
+            }
+            .category__count{
+              font-size: $font-base;
+              font-weight: 400;
+              color: $light-gray;
+            }
+          }
+        }
+      }
+    }
+
+
+
+    /* === section: feature === */
+    &#featureSec{
+      .inner{
+        .feature__content{
+          @include grid-container(repeat(4, 1fr), 0);
+
+          .feature{
+            padding: $space-xl;
+            @include border;
+            margin: -1px;
+
+            .feature__title{ margin: $space-l 0; }
+
+            .feature__desc{
+              font-size: $font-base;
+              color: $light-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

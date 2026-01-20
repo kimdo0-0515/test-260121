@@ -1,0 +1,149 @@
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+
+/* === reset === */
+@media all and (max-width: 1556px){
+  .inner{ width: 90%; }
+}
+
+
+
+/* === Small Desktop === */
+@include responsive('desktop'){
+  /* header */
+  header{
+    padding: $space-m;
+  }
+
+  /* main */
+  main{
+    section{
+      &#visualSec{
+        .inner{
+          @include grid-container(100%, $gap-l);
+        }
+      }
+
+      &#productSec{
+        .inner{
+          .product__content{
+            @include grid-container(repeat(3, 1fr), $gap-m);
+
+            .product{
+              @include grid-container(45% 55%, 0);
+            }
+          }
+        }
+      }
+
+      &#categorySec{
+        .inner{
+          .category__content{
+            @include grid-container(repeat(2, 1fr), $gap-m);
+          }
+        }
+      }
+
+      &#featureSec{
+        .inner{
+          .feature__content{
+            @include grid-container(repeat(2, 1fr), 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/* === Tablet === */
+@include responsive('tab'){
+  /* header */
+  header .inner{
+    @include grid-container(auto 1fr, $gap-xs $gap-s);
+  }
+
+  /* main */
+  main{
+    section{
+      &#productSec{
+        .inner{
+          .product__content{
+            @include grid-container(repeat(2, 1fr), $gap-s);
+
+            .product{
+              grid: auto auto / 100%;
+
+              .product__img{ aspect-ratio: auto; }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* footer */
+  footer .inner{
+    .footer__content{
+      @include grid-container(auto, $gap-l);
+    }
+
+    .footer__bottom{
+      @include grid-container(auto, $gap-m);
+      @include grid-center;
+    }
+  } 
+}
+
+
+
+/* === Mobile === */
+@include responsive('mobile'){
+  /* header */
+  header .inner{
+    @include grid-container(1fr, $gap-xs); 
+
+    .header__btn-wrap{
+      @include grid-container(repeat(2, min-content), $gap-s);
+    }
+  }
+
+  /* main */
+  main{
+    section{
+      &#visualSec{
+        .inner{
+          .visual__content{
+            h2{
+              font-size: 40px;
+            }
+          }
+        }
+      } 
+
+      &#productSec{
+        .inner{
+          .product__content{
+            @include grid-container(100%, $gap-s);
+          }
+        }
+      }
+
+      &#categorySec{
+        .inner{
+          .category__content{
+            @include grid-container(100%, $gap-s);
+          }
+        }
+      }
+
+      &#featureSec{
+        .inner{
+          .feature__content{
+            @include grid-container(100%, 0);
+          }
+        }
+      }
+    }
+  }
+}

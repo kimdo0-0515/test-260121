@@ -1,0 +1,80 @@
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+
+@mixin grid-container($column, $gap){
+  display: grid;
+  grid-template-columns: $column;
+  gap: $gap;
+}
+
+@mixin grid-center{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive($break-point){
+  @if($break-point == 'mobile'){
+    @media all and (max-width: $bp-mo){
+      @content; // 이 부분에 작성한 스타일 속성이 삽입됨
+    }
+  }
+  @else if($break-point == 'tab'){
+    @media all and (max-width: $bp-tab){
+      @content;
+    }
+  }
+  @else if($break-point == 'desktop'){
+    @media all and (max-width: $bp-desktop){
+      @content;
+    }
+  }
+}
+
+@mixin transition($property: all, $duration: 0.3s){
+  transition: $property $duration;
+}
+
+@mixin hover-border{
+  @include transition;
+
+  &:hover{
+    border-color: $point-color;
+  }
+}
+
+@mixin border($side: 'all'){
+  @if($side == 'all'){
+    border: 2px solid $border-color;
+  }
+  @else if($side == 'top'){
+    border-top: 2px solid $border-color;
+  }
+  @else if($side == 'bottom'){
+    border-bottom: 2px solid $border-color;
+  }
+  @else if($side == 'left'){
+    border-left: 2px solid $border-color;
+  }
+  @else if($side == 'right'){
+    border-right: 2px solid $border-color;
+  }
+}
+
+@mixin section-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button{
+    margin-left: auto;
+  }
+}
+
+
+
+/* ===== Component ===== */
+@mixin btn-line{
+  @include grid-center;
+  @include border;
+  @include transition(all, 0.15s);
+}

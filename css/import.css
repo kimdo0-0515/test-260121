@@ -1,0 +1,494 @@
+@charset "UTF-8";
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+/* ===== Color ===== */
+/* ===== Font ===== */
+/* ===== Spacing ===== */
+/* ===== Responsive Break Point ===== */
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+/* ===== Component ===== */
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+@font-face {
+  font-family: "YPairing";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/YPairingFont.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "YPairing";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/YPairingFont-Bd.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "YPairing";
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #111;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.inner {
+  width: 1400px;
+  margin: 0 auto;
+}
+@media all and (max-width: 1556px) {
+  .inner {
+    width: 90%;
+  }
+}
+
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+header {
+  background-color: #fdfdfd;
+  border-bottom: 2px solid #e0e0e0;
+}
+header .inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 48px;
+  align-items: center;
+}
+header .inner .logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #333;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  header .inner .logo:hover {
+    color: #dc143c;
+  }
+}
+header .inner .gnb ul {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 32px;
+  justify-content: start;
+  align-items: center;
+}
+header .inner .gnb ul li {
+  padding: 20px 0;
+}
+header .inner .gnb ul li a {
+  color: #555;
+  transition: all 0.25s;
+}
+@media (hover: hover) and (pointer: fine) {
+  header .inner .gnb ul li a:hover {
+    color: #111;
+  }
+}
+header .inner .header__btn-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+}
+header .inner .header__btn-wrap .icon-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #fdfdfd;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  transition: all 0.15s;
+}
+
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+footer {
+  padding: 64px 0 24px 0;
+  background-color: #111;
+  color: #fdfdfd;
+}
+footer .inner .footer__content {
+  padding-bottom: 24px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 48px;
+  border-bottom: 2px solid #e0e0e0;
+}
+footer .inner .footer__content .footer__text-wrap h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+footer .inner .footer__content .footer__text-wrap p {
+  font-size: 12px;
+}
+footer .inner .footer__content .fnb {
+  font-size: 14px;
+}
+footer .inner .footer__content .fnb h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+footer .inner .footer__content .fnb ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+footer .inner .footer__content .fnb ul li a {
+  color: #a0a0a0;
+  transition: all 0.25s;
+}
+@media (hover: hover) and (pointer: fine) {
+  footer .inner .footer__content .fnb ul li a:hover {
+    color: #fdfdfd;
+  }
+}
+footer .inner .footer__bottom {
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+footer .inner .footer__bottom .copyright {
+  font-size: 12px;
+  color: #ffc0cb;
+}
+footer .inner .footer__bottom .sns-wrap {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+footer .inner .footer__bottom .sns-wrap button {
+  width: 40px;
+  height: 40px;
+  background-color: #fdfdfd;
+  border: none;
+  border-radius: 50%;
+}
+footer .inner .footer__bottom .sns-wrap button a {
+  color: #a0a0a0;
+  transition: all 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  footer .inner .footer__bottom .sns-wrap button a:hover {
+    color: #dc143c;
+  }
+}
+
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+main section {
+  padding: 80px 0;
+  border-bottom: 2px solid #e0e0e0;
+  /* === section: main visual === */
+  /* === section: product === */
+  /* === section: category === */
+  /* === section: feature === */
+}
+main section#visualSec .inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+main section#visualSec .inner .visual__content {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  margin: auto 0;
+}
+main section#visualSec .inner .visual__content h2 {
+  font-size: 48px;
+}
+main section#visualSec .inner .visual__content p {
+  color: #555;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+main section#visualSec .inner .visual__content button {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  transition: all 0.15s;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px 20px;
+  background-color: #111;
+  border-color: transparent;
+  font-size: 15px;
+}
+main section#visualSec .inner .visual__content button a {
+  color: #fdfdfd;
+}
+@media (hover: hover) and (pointer: fine) {
+  main section#visualSec .inner .visual__content button:hover {
+    background-color: #fdfdfd;
+    border-color: #e0e0e0;
+  }
+  main section#visualSec .inner .visual__content button:hover a {
+    color: #111;
+  }
+}
+main section#visualSec .inner .visual__img {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 4/3;
+  background-color: #a0a0a0;
+  border: 2px solid #e0e0e0;
+}
+.section__top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.section__top h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.section__top button {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  transition: all 0.15s;
+  background-color: #fdfdfd;
+  padding: 12px 20px;
+  font-size: 15px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .section__top button:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+main section#productSec .inner .product__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+main section#productSec .inner .product__content .product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+  main section#productSec .inner .product__content .product:hover {
+    border-color: #dc143c;
+  }
+}
+main section#productSec .inner .product__content .product .product__img {
+  aspect-ratio: 1/1;
+  padding: 20px;
+  background-color: #a0a0a0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main section#productSec .inner .product__content .product .product__img .product__badge {
+  padding: 4px;
+  background-color: #111;
+  font-size: 11px;
+  color: #fdfdfd;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+main section#productSec .inner .product__content .product .product__info {
+  height: 100%;
+  padding: 8px;
+  display: grid;
+  grid: repeat(3, min-content)/100%;
+  align-items: center;
+  align-content: center;
+  margin: auto 0;
+}
+main section#productSec .inner .product__content .product .product__info .product__category {
+  font-size: 14px;
+  color: #a0a0a0;
+}
+main section#productSec .inner .product__content .product .product__info .product__title {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+main section#productSec .inner .product__content .product .product__info .product__price .original-price {
+  font-size: 12px;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-left: 4px;
+}
+main section#categorySec {
+  background-color: #a0a0a0;
+}
+main section#categorySec .inner .category__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+main section#categorySec .inner .category__content .category {
+  aspect-ratio: 4/3;
+  background-color: #fdfdfd;
+  border: 2px solid #e0e0e0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid: repeat(3, min-content)/100%;
+  align-content: center;
+  text-align: center;
+}
+main section#categorySec .inner .category__content .category .category__title {
+  font-size: 20px;
+  margin: 24px 0;
+}
+main section#categorySec .inner .category__content .category .category__count {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a0a0a0;
+}
+main section#featureSec .inner .feature__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+main section#featureSec .inner .feature__content .feature {
+  padding: 24px;
+  border: 2px solid #e0e0e0;
+  margin: -1px;
+}
+main section#featureSec .inner .feature__content .feature .feature__title {
+  margin: 20px 0;
+}
+main section#featureSec .inner .feature__content .feature .feature__desc {
+  font-size: 14px;
+  color: #a0a0a0;
+}
+
+/* scss 파일명 앞에 _(언더바) 기호를 사용하면 css 파일을 컴파일하지 않음 */
+/* === reset === */
+@media all and (max-width: 1556px) {
+  .inner {
+    width: 90%;
+  }
+}
+/* === Small Desktop === */
+@media all and (max-width: 1024px) {
+  /* header */
+  header {
+    padding: 16px;
+  }
+  /* main */
+  main section#visualSec .inner {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 48px;
+  }
+  main section#productSec .inner .product__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  main section#productSec .inner .product__content .product {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 0;
+  }
+  main section#categorySec .inner .category__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  main section#featureSec .inner .feature__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+}
+/* === Tablet === */
+@media all and (max-width: 768px) {
+  /* header */
+  header .inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 16px;
+  }
+  /* main */
+  main section#productSec .inner .product__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  main section#productSec .inner .product__content .product {
+    grid: auto auto/100%;
+  }
+  main section#productSec .inner .product__content .product .product__img {
+    aspect-ratio: auto;
+  }
+  /* footer */
+  footer .inner .footer__content {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 48px;
+  }
+  footer .inner .footer__bottom {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 24px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* === Mobile === */
+@media all and (max-width: 480px) {
+  /* header */
+  header .inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  header .inner .header__btn-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    gap: 16px;
+  }
+  /* main */
+  main section#visualSec .inner .visual__content h2 {
+    font-size: 40px;
+  }
+  main section#productSec .inner .product__content {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+  main section#categorySec .inner .category__content {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+  main section#featureSec .inner .feature__content {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 0;
+  }
+}
