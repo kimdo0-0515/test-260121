@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학생 출결 상태 관리 프로그램</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <!-- 1) h1 제목 -->
+    <h1>학생 출결 상태 관리 프로그램</h1>
+
+    <!-- 2) 필터 버튼 -->
+    <div class="filters" role="group" aria-label="출결 상태 필터">
+      <button class="filter-btn" data-filter="전체" aria-pressed="true">전체</button>
+      <button class="filter-btn" data-filter="출석" aria-pressed="false">출석</button>
+      <button class="filter-btn" data-filter="결석" aria-pressed="false">결석</button>
+      <button class="filter-btn" data-filter="지각" aria-pressed="false">지각</button>
+    </div>
+
+    <!-- 3) 총 n명 -->
+    <div class="count" id="countText">총 0명</div>
+
+    <!-- 4) 학생 카드 영역 -->
+    <div class="grid" id="cardGrid"></div>
+  </div>
+
+  <script src="server-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
