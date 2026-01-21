@@ -1,57 +1,89 @@
-# scss-test
-## 제목 2
-### 제목 3
-그냥 텍스트 **굵은 텍스트** __굵은 텍스트__
-- 리스트 항목 1
-- 리스트 항목 2
+# 📘 학생 출결 상태 관리 프로그램
 
-[naver](https://www.naver.com/) : [] 괄호 안의 단어에 하이퍼링크  
-```[naver](https://www.naver.com/)``` : 백틱 3개로 감싸서 블럭으로 표현
+HTML, CSS, JavaScript 기반으로 구현한 학생 출결 상태 관리 웹 프로그램입니다. <br>
+외부 시스템에서 전달받은 학생 출결 데이터를 웹 화면에 연계하여 시각화하고, 사용자가 출결 상태별로 필터링하여 확인할 수 있도록 구현한 데이터 연계 기반 UI 프로젝트입니다.
+<br><br>
+## 1. 프로젝트 개요
+본 프로젝트는 외부 시스템에서 관리되는 학생 출결 데이터를 웹 애플리케이션으로 연계하여 출결 상태(출석, 결석, 지각)에 따라 학생 정보를 동적으로 출력하고 필터링할 수 있도록 구현한 프로그램입니다. <br>
+단순한 정적 화면 구현이 아니라, **외부 데이터 → 내부 시스템 처리 → UI 반영**의 구조를 통해 데이터 연계 흐름과 프론트엔드 데이터 처리 구조를 학습 및 구현하는 데 목적이 있습니다.
+<br><br>
+## 2. 파일 구성
+- index.html : UI 레이아웃 및 DOM 구조 정의
+- style.css : 카드 UI, 필터 버튼, 출결 상태 라벨 색상 스타일링
+- server-data.js : 외부 시스템 역할, 학생 출결 데이터 제공
+- script.js : 데이터 필터링, 렌더링, 이벤트 처리
+<br><br>
+## 3. 실행 방법
+1. 저장소를 클론하거나 다운로드합니다.
+2. index.html 파일을 브라우저에서 직접 실행합니다.
+3. 필터 버튼을 클릭하여 출결 상태별 학생 목록을 확인할 수 있습니다.
+> 별도의 서버 환경이나 빌드 과정 없이 브라우저에서 바로 실행 가능한 구조입니다.
 
-문장 끝나고 스페이스 2번으로 줄바꿈 <br>
-또는 br 태그 사용해서 줄바꿈
 
-
-<div align= "center">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=180&text=Hello%20World!&animation=fadeIn&fontColor=000000&fontSize=50" />
-</div>
-<div style="text-align: left;"> 
-    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 안녕 </h2>  
-    <div style="font-weight: 700; font-size: 15px; text-align: left; color: #282d33;"> 안녕하세요 </div> 
-</div>
-<div style="text-align: left;">
-    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🛠️ Tech Stacks </h2>
-    <br> 
-    <div style="margin: ; text-align: left;" "text-align: left;">
-      <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white">
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
-      <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
-      <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white">
-      <br/>
-      <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white">
-      <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white">
-      <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white">
-    </div>
-</div>
-<div style="text-align: left;">
-    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🧑‍💻 Contact me </h2>
-    <br> 
-    <div style="text-align: left;">
-      <a href=mailto:>
-        <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:">
-      </a>
-      <a href=>
-        <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white&link=">
-      </a>
-    </div>
-    <br> 
-    <div style="text-align: left;">  </div> 
-</div>
-<div style="text-align: left;"> 
-    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🏅 Stats </h2>
-    <div style="text-align: left;">
-      <img src="https://github-readme-stats.vercel.app/api?username=kimdo0-0515&custom_title=kimdo0-0515's Github Stat&bg_color=180,000000,&title_color=000000&text_color=000000"/>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kimdo0-0515&layout=compact&bg_color=180,000000,&title_color=000000&text_color=000000"/>
-    </div> 
-</div> 
+## 4. 주요 기능
+- 전체 학생 목록 출력
+- 출결 상태별 필터링 : 전체 / 출석 / 결석 / 지각
+- 필터 결과에 따른 실시간 인원 수 표시
+- 출결 상태별 색상 라벨 표시
+    - 출석: 파랑
+    - 결석: 회색
+    - 지각: 주황
+- 외부 데이터 변경 시 화면에 자동 반영되는 구조
+<br><br>
+## 5. 외부 시스템과 내부 시스템 설명
+### 📌 외부 시스템
+외부 시스템은 학생 출결 데이터를 관리하는 역할을 하며, 본 프로젝트에서는 serverStudents 객체 배열이 그 역할을 수행합니다.
+```js
+const serverStudents = [
+  { id: "STU-001", name: "김철수", className: "1학년 3반", status: "출석" },
+  ...
+];
+```
+- 실제 서비스에서는 DB 또는 API 서버가 담당할 영역
+- 현재는 정적 데이터지만, 외부 시스템 개념을 그대로 반영하여 설계됨
+<br><br>
+### 📌 내부 시스템
+HTML, CSS, JS로 구성된 클라이언트 영역으로, 외부 시스템으로부터 전달된 데이터를 가공하여 화면에 출력합니다.<br>
+내부 시스템이 담당하는 역할:<br>
+- 외부 데이터 필터링
+- 출결 상태에 따른 UI 변환
+- 사용자 인터랙션 처리
+- 렌더링 제어
+<br><br>
+## 6. 외/내부 시스템 연계에 사용된 데이터 항목
+외부 시스템(serverStudents)에서 내부 시스템으로 전달되는 주요 데이터 항목은 다음과 같습니다.
+- id : 학생 고유 식별자
+- name : 학생 이름
+- className : 학년 및 반 정보
+- status : 출결 상태 (출석/결석/지각)
+이 데이터들은 내부 시스템에서 다음과 같이 활용됩니다:<br>
+- 카드 UI 생성
+- 출결 상태 라벨 표시
+- 필터링 기준 값으로 사용
+- 총 인원 수 계산 기준
+<br><br>
+## 7. 외부 서버 데이터가 웹 화면에 반영되는 흐름
+본 프로젝트의 데이터 흐름은 다음 단계로 구성됩니다.<br>
+**외부 시스템(serverStudents) → script.js에서 데이터 수신 → 출결 상태 필터링 로직 적용 → 학생 카드 DOM 생성 → 화면 렌더링**<br>
+### 구체적인 처리 과정
+1. server-data.js에서 학생 출결 데이터 정의
+2. script.js에서 해당 데이터를 불러옴
+3. 사용자가 필터 버튼 클릭
+4. 필터 조건에 맞는 데이터만 추출
+5. 추출된 데이터 기반으로 카드 UI 생성
+6. 인원 수(총 n명) 실시간 갱신
+<br><br>
+## 8. 해당 프로젝트가 데이터 연계 구현인 이유
+본 프로젝트는 단순한 정적 웹 페이지가 아니라 **외부 데이터와 내부 UI 시스템이 명확히 분리되고 연계된 구조**를 가지고 있기 때문에 데이터 연계 구현 사례로 볼 수 있습니다.<br>
+### 데이터 연계 구현으로 볼 수 있는 근거
+- 외부 시스템(serverStudents)과 내부 시스템(UI 로직)이 분리되어 있음
+- 외부 데이터 구조 변경 시 내부 UI가 자동으로 반영되는 구조
+- 필터링 및 렌더링이 데이터 중심으로 동작
+- UI가 하드코딩이 아닌 데이터 기반으로 생성됨
+즉, <br>
+> **“데이터가 바뀌면 화면이 바뀌는 구조”** <br>
+> 를 명확하게 구현하고 있기 때문에,<br>
+> 본 프로젝트는 프론트엔드 관점의 데이터 연계 구현 예제로 충분한 의미를 가집니다.
+## 결론
+이 프로젝트는 단순 UI 구현을 넘어서<br>
+**외부 데이터 연계 → 가공 → 시각화 → 사용자 인터랙션 처리**까지 포함하는 구조로 설계되었으며, 프론트엔드 개발자로서 데이터 흐름을 이해하고 구현할 수 있음을 보여주는 예제 프로젝트입니다.
